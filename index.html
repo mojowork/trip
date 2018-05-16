@@ -8,5 +8,11 @@
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      // 经典的1px border问题 解决方案
+      let meta = document.querySelector('meta[name=viewport]')
+      let dpr = window.devicePixelRatio
+      meta.setAttribute('content', 'initial-scale=' + 1 / dpr + ', maximum-scale=' + 1 / dpr + ', minimum-scale=' + 1 / dpr + ', user-scalable=no')
+    </script>
   </body>
 </html>

@@ -29,5 +29,8 @@ module.exports = {
     'eol-last': 0,
     // 函数前不用留空格
     'space-before-function-paren': 0,
+    // 采用4空格缩进
+    // "indent": ["error", 4]
+    "indent": 0
   }
 }

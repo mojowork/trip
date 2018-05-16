@@ -4,16 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastclick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'styles/iconfont.css'
 import 'styles/index.scss'
+import 'swiper/dist/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
-
-// 经典的1px border问题 解决方案
-let meta = document.querySelector('meta[name=viewport]')
-let dpr = window.devicePixelRatio
-meta.setAttribute('content', 'initial-scale=' + 1 / dpr + ', maximum-scale=' + 1 / dpr + ', minimum-scale=' + 1 / dpr + ', user-scalable=no')
-
 // 得到手机屏幕的宽度
 let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth
 // 得到html的Dom元素
@@ -25,8 +23,8 @@ fastclick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
